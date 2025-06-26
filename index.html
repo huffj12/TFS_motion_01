@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Audio Reactive Typography</title>
+  <link rel="stylesheet" href="https://use.typekit.net/foy6jhs.css" />
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/p5.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/addons/p5.sound.min.js"></script>
+</head>
+<body>
+  <div id="gui">
+    <label for="preset">Animation:</label>
+    <select id="preset">
+      <option value="wave">Wave</option>
+      <option value="bounce">Bounce</option>
+      <option value="scale">Scale</option>
+      <option value="wave+scale">Wave + Scale</option>
+      <option value="beat-react"> Beat React</option>
+      <option value ="wave-sync"> Wave Sync</option>
+      <option value="circular-text"> circular text</option>
+      <option value="all">All</option>   
+ <label for="top-y">Top Text Y Offset:</label>
+<input type="range" id="top-y" min="-200" max="800" value="0" step="1" />
+
+<label for="bottom-y">Bottom Text Y Offset:</label>
+<input type="range" id="bottom-y" min="-200" max="500" value="0" step="1" />
+
+    </select>
+
+    <label for="layout">Layout:</label>
+    <select id="layout">
+      <option value="hd">1920×1080</option>
+      <option value="portrait">1080×1350</option>
+      <option value="square">1080×1080</option>
+      <option value="story">1080×1920</option>
+      <option value="a2">A2</option>
+      <option value="a3">A3</option>
+      <option value="a4">A4</option>
+    </select>
+
+    <label for="text-color">Text Color:</label>
+    <select id="text-color"></select>
+
+    <label for="bg-color">Background Color:</label>
+    <select id="bg-color"></select>
+
+    <label for="bg-image">Background Image:</label>
+    <input type="file" id="bg-image" accept="image/*" />
+
+    <label for="audio-file">MP3 File:</label>
+    <input type="file" id="audio-file" accept="audio/*" />
+
+    <label for="top-text">Top Text:</label>
+    <input type="text" id="top-text" placeholder="Enter top word" />
+
+    <label for="bottom-text">Bottom Text:</label>
+    <input type="text" id="bottom-text" placeholder="Enter bottom word" />
+
+    <label for="font-size">Font Size:</label>
+    <input type="range" id="font-size" min="1" max="20" step="0.1" value="6" />
+
+    <label><input type="checkbox" id="show-grid" /> Show Grid</label>
+
+    <button id="update-text">Update Text</button>
+    <button id="play-button">Play Audio</button>
+  </div>
+
+  <div id="layout-scaler">
+    <div id="layout-wrapper">
+      <div id="grid-overlay"></div>
+      <div id="top-container"></div>
+      <div id="bottom-container"></div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
+
+
